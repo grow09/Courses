@@ -49,9 +49,7 @@ class Horse(Animal):
     def sleep(self):
         return "%s спит %s" % (self.name, self.location)
 
-class Veterinar(
-
-):
+class Veterinar(Animal):
     def threatAnimal(self):
         return "%s ест %s и живёт %s" % (self.name, self.eat, self.location)
 
