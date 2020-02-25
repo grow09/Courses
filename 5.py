@@ -22,7 +22,7 @@ class News(Publications):
         self.source = source
 
     def printMaterial(self):
-        return "%s: %s /n Источник: %s /n дата: %s" (self.heading, self.text, self.source, self.date)
+        return "%s: %s /n Источник: %s /n дата: %s" % (self.heading, self.text, self.source, self.date)
 
 class Advertisement(Publications):
     def Publication(self, heading, text, date, autor):
@@ -32,7 +32,7 @@ class Advertisement(Publications):
         self.autor = autor
 
     def printMaterial(self):
-        return "%s: %s /n Автор: %s /n дата: %s" (self.heading, self.text, self.autor, self.date)
+        return "%s: %s /n Автор: %s /n дата: %s" % (self.heading, self.text, self.autor, self.date)
 
 class Article(Publications):
     def Publication(self, heading, text, endDate):
@@ -41,7 +41,7 @@ class Article(Publications):
         self.endDate = endDate
 
     def printMaterial(self):
-        return "%s: %s /n дата: %s" (self.heading, self.text, self.endDate)
+        return "%s: %s /n дата: %s" % (self.heading, self.text, self.endDate)
 
 
 if __name__ == "__main__":
