@@ -1,25 +1,9 @@
-var min = 0;
-
-document.getElementById("min").innerHTML = min;
-
-
-var carName = 'Ford'
-var carYear = 2005
-
-var personYear = 2012
-
-/*if(calculateAge(carYear) < 10) {
-   console.log('less 10 years')
-} else {
-   console.log('more 10 years')
+function print(){
+    checkAndLogAge(document.getElementById("human").value)
+    checkAndLogAge(document.getElementById("car").value)
+    human = document.getElementById("human").value
+    car = document.getElementById("car").value
 }
-
-if(calculateAge(personYear) < 10) {
-   console.log('less 10 years')
-} else {
-   console.log('more 10 years')
-}*/
-
 
 function calculateAge(year) {
    var currentYear = 2020
@@ -28,12 +12,23 @@ function calculateAge(year) {
 }
 
 function checkAndLogAge(year) {
-   if (calculateAge(year) < 10) {
-       console.log('less 10 years')
-   } else {
-       console.log('more 10 years')
-   }
+    if (year !== ''){
+        if (calculateAge(year) < 0) {
+            console.log('WTF?')
+        } else if (calculateAge(year) < 10) {
+                if (year == human){
+                    console.log('You younger than 10 years')
+                } else if (year == car) {
+                    console.log('Car younger than 10 years')
+                } 
+        } else if (calculateAge(year) >= 10) {
+                if (year == human){
+                    console.log('You older than 10 years')
+                } else if (year == car) {
+                    console.log('Car older than 10 years')
+                }
+        } else {
+            console.log("Incorrect data!")
+        }
+    } 
 }
-
-checkAndLogAge(carYear)
-checkAndLogAge(personYear)
